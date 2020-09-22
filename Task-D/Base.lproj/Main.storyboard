@@ -54,10 +54,11 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZ5-Kc-vYi" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZ5-Kc-vYi" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
                                 <rect key="frame" x="15" y="141" width="43" height="39"/>
                                 <color key="backgroundColor" red="0.2627450980392157" green="0.51372549019607838" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="tintColor" red="0.2627450980392157" green="0.51764705882352935" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="contentEdgeInsets" minX="9" minY="11" maxX="9" maxY="11"/>
                                 <state key="normal" title="원룸">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -73,8 +74,11 @@
                                         <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x63-cy-WeX"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGs-yJ-enr" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGs-yJ-enr" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
                                 <rect key="frame" x="15" y="226" width="43" height="39"/>
                                 <color key="backgroundColor" red="0.26274509800000001" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -93,8 +97,11 @@
                                         <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TAV-Pt-Ysm"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eV-lZ-gTa" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eV-lZ-gTa" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
                                 <rect key="frame" x="66" y="226" width="43" height="39"/>
                                 <color key="backgroundColor" red="0.26274509800000001" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -113,8 +120,11 @@
                                         <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HNj-xa-Lij"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdG-Le-5qp" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdG-Le-5qp" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
                                 <rect key="frame" x="117" y="226" width="43" height="39"/>
                                 <color key="backgroundColor" red="0.26274509800000001" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -133,8 +143,11 @@
                                         <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SCC-A4-PVN"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGs-CT-8QB" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGs-CT-8QB" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
                                 <rect key="frame" x="66" y="141" width="61" height="39"/>
                                 <color key="backgroundColor" red="0.26274509800000001" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -153,8 +166,11 @@
                                         <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VbI-Wi-DIo"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1A-rr-YX3" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1A-rr-YX3" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
                                 <rect key="frame" x="135" y="141" width="61" height="39"/>
                                 <color key="backgroundColor" red="0.26274509800000001" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -173,8 +189,11 @@
                                         <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kAt-GC-IeM"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-Ha-cfz" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-Ha-cfz" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
                                 <rect key="frame" x="193" y="226" width="61" height="39"/>
                                 <color key="backgroundColor" red="0.26274509800000001" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -193,8 +212,11 @@
                                         <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOt-hf-guR"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2z-AV-ETR" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2z-AV-ETR" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
                                 <rect key="frame" x="204" y="141" width="49" height="39"/>
                                 <color key="backgroundColor" red="0.26274509800000001" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -213,6 +235,9 @@
                                         <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wr2-V2-wzi"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t4k-zh-1XU">
                                 <rect key="frame" x="0.0" y="285" width="414" height="543"/>
@@ -255,8 +280,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="apartment" destination="n2z-AV-ETR" id="eJo-UY-mIZ"/>
+                        <outlet property="month" destination="QGs-yJ-enr" id="2KQ-K5-gQU"/>
+                        <outlet property="officetel" destination="B1A-rr-YX3" id="iUI-Vd-AG6"/>
+                        <outlet property="oneRoom" destination="GZ5-Kc-vYi" id="Biu-tc-vSC"/>
                         <outlet property="searchBar" destination="KK8-7U-CFF" id="Ong-eC-ha8"/>
+                        <outlet property="sell" destination="cdG-Le-5qp" id="cCx-Zf-T9I"/>
+                        <outlet property="sort" destination="EUd-Ha-cfz" id="aiZ-vp-UgO"/>
                         <outlet property="tableView" destination="t4k-zh-1XU" id="sLr-Ny-emC"/>
+                        <outlet property="twoRoom" destination="B1A-rr-YX3" id="yrP-Dz-ZCb"/>
+                        <outlet property="year" destination="6eV-lZ-gTa" id="xPA-UO-ziW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

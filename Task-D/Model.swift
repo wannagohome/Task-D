@@ -32,8 +32,8 @@ struct Model {
         }
     }
     
-    func getRoom(page: Int) -> Single<[Room]> {
-        return getRoomList().map { $0.rooms?.at(page: page) ?? [] }
+    func getRoom() -> Single<[Room]> {
+        return getRoomList().map { $0.rooms ?? [] }
     }
     
     func getAverage() -> Single<[Average]> {

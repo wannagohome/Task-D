@@ -18,6 +18,9 @@ final class RoomListReactor: Reactor {
     enum Action {
         case getWholeList
         case loadNextPage
+        case filterRoomType(Int)
+        case filterSellingType(Int)
+        case switchSortation
     }
     
     enum Mutation {
@@ -26,6 +29,9 @@ final class RoomListReactor: Reactor {
         case setAverage([Average])
         case setLoading(Bool)
         case setPage(Int)
+        case setRoomTypeFilter(Int)
+        case setSellingTypeFilter(Int)
+        case switchSortation
     }
     
     struct State {
@@ -34,6 +40,9 @@ final class RoomListReactor: Reactor {
         var page = 1
         var isLoading: Bool = false
         var isLastPage: Bool = false
+        var roomTypeFilter: [Int] = [0,1,2,3]
+        var sellTypeFilter: [Int] = [0,1,2]
+        var sort: Sort = .ascending
     }
     
     func mutate(action: Action) -> Observable<Mutation> {
@@ -41,26 +50,55 @@ final class RoomListReactor: Reactor {
         let endLoading = Observable<Mutation>.just(.setLoading(false))
         let firstPage = Observable<Mutation>.just(.setPage(1))
         let nextPage = Observable<Mutation>.just(.setPage(self.currentState.page+1))
+        let getList = model.getRoom()
+            .asObservable()
+            .map { room -> [Room] in
+                room.sorted {
+                    if self.currentState.sort == .ascending {
+                        return $0.price > $1.price
+                    } else {
+                        return $0.price < $1.price
+                    }
+                }
+        }
+        .map {
+            $0.filter {
+                self.currentState.roomTypeFilter.contains($0.roomType!) &&
+                        self.currentState.sellTypeFilter.contains($0.sellingType!)
+                }
+        }
+        .map { $0.at(page: self.currentState.page) }
+
+        let setList = getList.map { Mutation.setList($0) }
+        let appendList = getList.map { Mutation.appendList($0) }
+        let getAverage = model.getAverage()
+            .asObservable()
+            .map { Mutation.setAverage($0) }
         
         switch action {
         case .getWholeList:
             guard !self.currentState.isLoading else { return .empty() }
             guard !self.currentState.isLastPage else { return .empty() }
-            let getList = model.getRoom(page: self.currentState.page)
-                .asObservable()
-                .map { Mutation.setList($0) }
-            let getAverage = model.getAverage()
-                .asObservable()
-                .map { Mutation.setAverage($0) }
-            return .concat([startLoading, firstPage, getList, getAverage, endLoading])
+            
+
+            return .concat([startLoading, firstPage, setList, getAverage, endLoading])
             
         case .loadNextPage:
             guard !self.currentState.isLoading else { return .empty() }
             guard !self.currentState.isLastPage else { return .empty() }
-            let appendList = model.getRoom(page: self.currentState.page)
-                .asObservable()
-                .map { Mutation.appendList($0) }
             return .concat([startLoading, nextPage, appendList, endLoading])
+            
+        case .filterRoomType(let n):
+            let filtering = Observable.just(Mutation.setRoomTypeFilter(n))
+            return .concat([startLoading, filtering, firstPage, setList, getAverage, endLoading])
+            
+        case .filterSellingType(let n):
+            let filtering = Observable.just(Mutation.setSellingTypeFilter(n))
+            return .concat([startLoading, filtering, firstPage, setList, getAverage, endLoading])
+            
+        case .switchSortation:
+            let sorting = Observable.just(Mutation.switchSortation)
+            return .concat([startLoading, sorting, firstPage, setList, getAverage, endLoading])
         }
     }
     
@@ -83,7 +121,33 @@ final class RoomListReactor: Reactor {
             
         case .setPage(let page):
             newState.page = page
+            
+        case .setRoomTypeFilter(let n):
+            if newState.roomTypeFilter.contains(n) {
+                newState.roomTypeFilter.remove(at: newState.roomTypeFilter.firstIndex(of: n)!)
+            } else {
+                newState.roomTypeFilter.append(n)
+            }
+            
+        case .setSellingTypeFilter(let n):
+            if newState.sellTypeFilter.contains(n) {
+                newState.sellTypeFilter.remove(at: newState.sellTypeFilter.firstIndex(of: n)!)
+            } else {
+                newState.sellTypeFilter.append(n)
+            }
+            
+        case .switchSortation:
+            if newState.sort == .ascending {
+                newState.sort = .descending
+            } else {
+                newState.sort = .ascending
+            }
         }
         return newState
     }
+}
+
+enum Sort {
+    case ascending
+    case descending
 }

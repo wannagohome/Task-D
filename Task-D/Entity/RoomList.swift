@@ -25,6 +25,27 @@ struct Room: Codable {
     var roomType, sellingType: Int?
     var hashTags: [String]?
     var imgURL: String?
+    var price: Int {
+        get {
+            var result = 0
+            var str = self.priceTitle
+            
+            if str?.contains("억") ?? false {
+                result += Int((str?.components(separatedBy: "억")[0])!)! * 10000
+                str = str?.components(separatedBy: "억")[1]
+            }
+            
+            if str?.contains("천") ?? false {
+                result += Int((str?.components(separatedBy: "천")[0])!)! * 1000
+                str = str?.components(separatedBy: "천")[1]
+            }
+            
+            if str?.contains("만") ?? false {
+                result += Int((str?.components(separatedBy: "만")[0])!)!
+            }
+            return result
+        }
+    }
 
     enum CodingKeys: String, CodingKey {
         case desc

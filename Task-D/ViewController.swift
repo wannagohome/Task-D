@@ -17,6 +17,17 @@ final class ViewController: UIViewController, StoryboardView {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    @IBOutlet weak var oneRoom: FilterButton!
+    @IBOutlet weak var twoRoom: FilterButton!
+    @IBOutlet weak var officetel: FilterButton!
+    @IBOutlet weak var apartment: FilterButton!
+    
+    @IBOutlet weak var month: FilterButton!
+    @IBOutlet weak var year: FilterButton!
+    @IBOutlet weak var sell: FilterButton!
+    
+    @IBOutlet weak var sort: FilterButton!
+    
     override func viewDidLoad() {
         tableView.register(RightCell.nib(), forCellReuseIdentifier: "RightCell")
         tableView.register(LeftCell.nib(), forCellReuseIdentifier: "LeftCell")
@@ -34,12 +45,38 @@ final class ViewController: UIViewController, StoryboardView {
             .disposed(by: disposeBag)
         
         self.tableView.rx.isReachedBottom
+            .throttle(.milliseconds(800), scheduler: MainScheduler.instance)
             .map { Reactor.Action.loadNextPage }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        Observable.of(oneRoom.rx.tap.map{0},
+                      twoRoom.rx.tap.map{1},
+                      officetel.rx.tap.map{2},
+                      apartment.rx.tap.map{3})
+            .merge()
+            .map { Reactor.Action.filterRoomType($0) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        Observable.of(month.rx.tap.map{0},
+                      year.rx.tap.map{1},
+                      sell.rx.tap.map{2})
+            .merge()
+            .map { Reactor.Action.filterSellingType($0) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        sort.rx.tap
+            .map { Reactor.Action.switchSortation }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
         let firstPage = reactor.state
             .compactMap { $0.roomList?.prefix(12).map { $0 as Decodable } }
+            .do(onNext: { [weak self] _ in
+                self?.tableView.reloadData()
+            })
         let average = reactor.state
             .compactMap { $0.average?.map { $0 as Decodable } }
         let nextPages = reactor.state
@@ -68,4 +105,9 @@ final class ViewController: UIViewController, StoryboardView {
         }
     .disposed(by: disposeBag)
     }
+    
+    @IBAction func tapButton(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
+    
 }

@@ -20,15 +20,6 @@
         }
       },
       {
-        "package": "RxAppState",
-        "repositoryURL": "https://github.com/pixeldock/RxAppState",
-        "state": {
-          "branch": null,
-          "revision": "82ff34635c49162db9ae0e9fd9176428cd062078",
-          "version": "1.6.1"
-        }
-      },
-      {
         "package": "RxExpect",
         "repositoryURL": "https://github.com/devxoul/RxExpect.git",
         "state": {
@@ -39,7 +30,7 @@
       },
       {
         "package": "RxSwift",
-        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift",
         "state": {
           "branch": null,
           "revision": "002d325b0bdee94e7882e1114af5ff4fe1e96afa",

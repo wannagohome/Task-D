@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2313940A251A058B00AE301A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 23139409251A058B00AE301A /* RxCocoa */; };
+		2313940C251A058B00AE301A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2313940B251A058B00AE301A /* RxSwift */; };
+		2313940F251A05B000AE301A /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2313940E251A05B000AE301A /* ReactorKit */; };
 		2333D1812518C39400543F23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1802518C39400543F23 /* AppDelegate.swift */; };
 		2333D1832518C39400543F23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1822518C39400543F23 /* SceneDelegate.swift */; };
 		2333D1852518C39400543F23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1842518C39400543F23 /* ViewController.swift */; };
@@ -21,12 +24,10 @@
 		2333D19F2519844B00543F23 /* LeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2333D19D2519844B00543F23 /* LeftCell.xib */; };
 		2333D1A32519877C00543F23 /* AverageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1A12519877C00543F23 /* AverageCell.swift */; };
 		2333D1A42519877C00543F23 /* AverageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2333D1A22519877C00543F23 /* AverageCell.xib */; };
-		2333D1A725198DF200543F23 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2333D1A625198DF200543F23 /* ReactorKit */; };
 		2333D1AA25198E6F00543F23 /* RoomListData.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2333D1A925198E6F00543F23 /* RoomListData.txt */; };
 		2333D1AD251991B600543F23 /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1AC251991B600543F23 /* RoomList.swift */; };
 		2333D1B12519970B00543F23 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1B02519970B00543F23 /* Model.swift */; };
 		2333D1B32519A3FC00543F23 /* Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1B22519A3FC00543F23 /* Reactor.swift */; };
-		2333D1B62519A5BD00543F23 /* RxAppState in Frameworks */ = {isa = PBXBuildFile; productRef = 2333D1B52519A5BD00543F23 /* RxAppState */; };
 		23340CC62519D2DA00CE0CFB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 23340CC52519D2DA00CE0CFB /* Kingfisher */; };
 		23340CC92519E25E00CE0CFB /* HashTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23340CC72519E25E00CE0CFB /* HashTagCell.swift */; };
 		23340CCA2519E25E00CE0CFB /* HashTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23340CC82519E25E00CE0CFB /* HashTagCell.xib */; };
@@ -64,9 +65,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2313940C251A058B00AE301A /* RxSwift in Frameworks */,
+				2313940A251A058B00AE301A /* RxCocoa in Frameworks */,
+				2313940F251A05B000AE301A /* ReactorKit in Frameworks */,
 				23340CC62519D2DA00CE0CFB /* Kingfisher in Frameworks */,
-				2333D1B62519A5BD00543F23 /* RxAppState in Frameworks */,
-				2333D1A725198DF200543F23 /* ReactorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,9 +177,10 @@
 			);
 			name = "Task-D";
 			packageProductDependencies = (
-				2333D1A625198DF200543F23 /* ReactorKit */,
-				2333D1B52519A5BD00543F23 /* RxAppState */,
 				23340CC52519D2DA00CE0CFB /* Kingfisher */,
+				23139409251A058B00AE301A /* RxCocoa */,
+				2313940B251A058B00AE301A /* RxSwift */,
+				2313940E251A05B000AE301A /* ReactorKit */,
 			);
 			productName = "Task-D";
 			productReference = 2333D17D2518C39400543F23 /* Task-D.app */;
@@ -208,9 +211,9 @@
 			);
 			mainGroup = 2333D1742518C39400543F23;
 			packageReferences = (
-				2333D1A525198DF200543F23 /* XCRemoteSwiftPackageReference "ReactorKit" */,
-				2333D1B42519A5BD00543F23 /* XCRemoteSwiftPackageReference "RxAppState" */,
 				23340CC42519D2DA00CE0CFB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				23139408251A058B00AE301A /* XCRemoteSwiftPackageReference "RxSwift" */,
+				2313940D251A05B000AE301A /* XCRemoteSwiftPackageReference "ReactorKit" */,
 			);
 			productRefGroup = 2333D17E2518C39400543F23 /* Products */;
 			projectDirPath = "";
@@ -456,20 +459,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2333D1A525198DF200543F23 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+		23139408251A058B00AE301A /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		2313940D251A05B000AE301A /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactorKit/ReactorKit";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.1.0;
-			};
-		};
-		2333D1B42519A5BD00543F23 /* XCRemoteSwiftPackageReference "RxAppState" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pixeldock/RxAppState";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.6.1;
 			};
 		};
 		23340CC42519D2DA00CE0CFB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
@@ -483,15 +486,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2333D1A625198DF200543F23 /* ReactorKit */ = {
+		23139409251A058B00AE301A /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2333D1A525198DF200543F23 /* XCRemoteSwiftPackageReference "ReactorKit" */;
-			productName = ReactorKit;
+			package = 23139408251A058B00AE301A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
 		};
-		2333D1B52519A5BD00543F23 /* RxAppState */ = {
+		2313940B251A058B00AE301A /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2333D1B42519A5BD00543F23 /* XCRemoteSwiftPackageReference "RxAppState" */;
-			productName = RxAppState;
+			package = 23139408251A058B00AE301A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		2313940E251A05B000AE301A /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2313940D251A05B000AE301A /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
 		};
 		23340CC52519D2DA00CE0CFB /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
