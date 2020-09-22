@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,24 @@
 		2333D1882518C39400543F23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2333D1862518C39400543F23 /* Main.storyboard */; };
 		2333D18A2518C39500543F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2333D1892518C39500543F23 /* Assets.xcassets */; };
 		2333D18D2518C39500543F23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2333D18B2518C39500543F23 /* LaunchScreen.storyboard */; };
+		2333D1952518E5C200543F23 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1942518E5C200543F23 /* FilterButton.swift */; };
+		2333D1972518ECFA00543F23 /* UIView + Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1962518ECFA00543F23 /* UIView + Ex.swift */; };
+		2333D19A25197BA400543F23 /* RightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D19825197BA400543F23 /* RightCell.swift */; };
+		2333D19B25197BA400543F23 /* RightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2333D19925197BA400543F23 /* RightCell.xib */; };
+		2333D19E2519844B00543F23 /* LeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D19C2519844B00543F23 /* LeftCell.swift */; };
+		2333D19F2519844B00543F23 /* LeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2333D19D2519844B00543F23 /* LeftCell.xib */; };
+		2333D1A32519877C00543F23 /* AverageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1A12519877C00543F23 /* AverageCell.swift */; };
+		2333D1A42519877C00543F23 /* AverageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2333D1A22519877C00543F23 /* AverageCell.xib */; };
+		2333D1A725198DF200543F23 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2333D1A625198DF200543F23 /* ReactorKit */; };
+		2333D1AA25198E6F00543F23 /* RoomListData.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2333D1A925198E6F00543F23 /* RoomListData.txt */; };
+		2333D1AD251991B600543F23 /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1AC251991B600543F23 /* RoomList.swift */; };
+		2333D1B12519970B00543F23 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1B02519970B00543F23 /* Model.swift */; };
+		2333D1B32519A3FC00543F23 /* Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1B22519A3FC00543F23 /* Reactor.swift */; };
+		2333D1B62519A5BD00543F23 /* RxAppState in Frameworks */ = {isa = PBXBuildFile; productRef = 2333D1B52519A5BD00543F23 /* RxAppState */; };
+		23340CC62519D2DA00CE0CFB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 23340CC52519D2DA00CE0CFB /* Kingfisher */; };
+		23340CC92519E25E00CE0CFB /* HashTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23340CC72519E25E00CE0CFB /* HashTagCell.swift */; };
+		23340CCA2519E25E00CE0CFB /* HashTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23340CC82519E25E00CE0CFB /* HashTagCell.xib */; };
+		23340CCC251A036B00CE0CFB /* UIScrollView + Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23340CCB251A036B00CE0CFB /* UIScrollView + Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +42,21 @@
 		2333D1892518C39500543F23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2333D18C2518C39500543F23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2333D18E2518C39500543F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2333D1942518E5C200543F23 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
+		2333D1962518ECFA00543F23 /* UIView + Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ex.swift"; sourceTree = "<group>"; };
+		2333D19825197BA400543F23 /* RightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightCell.swift; sourceTree = "<group>"; };
+		2333D19925197BA400543F23 /* RightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightCell.xib; sourceTree = "<group>"; };
+		2333D19C2519844B00543F23 /* LeftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftCell.swift; sourceTree = "<group>"; };
+		2333D19D2519844B00543F23 /* LeftCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftCell.xib; sourceTree = "<group>"; };
+		2333D1A12519877C00543F23 /* AverageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageCell.swift; sourceTree = "<group>"; };
+		2333D1A22519877C00543F23 /* AverageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AverageCell.xib; sourceTree = "<group>"; };
+		2333D1A925198E6F00543F23 /* RoomListData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RoomListData.txt; sourceTree = "<group>"; };
+		2333D1AC251991B600543F23 /* RoomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomList.swift; sourceTree = "<group>"; };
+		2333D1B02519970B00543F23 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2333D1B22519A3FC00543F23 /* Reactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reactor.swift; sourceTree = "<group>"; };
+		23340CC72519E25E00CE0CFB /* HashTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCell.swift; sourceTree = "<group>"; };
+		23340CC82519E25E00CE0CFB /* HashTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HashTagCell.xib; sourceTree = "<group>"; };
+		23340CCB251A036B00CE0CFB /* UIScrollView + Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView + Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23340CC62519D2DA00CE0CFB /* Kingfisher in Frameworks */,
+				2333D1B62519A5BD00543F23 /* RxAppState in Frameworks */,
+				2333D1A725198DF200543F23 /* ReactorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +94,68 @@
 			children = (
 				2333D1802518C39400543F23 /* AppDelegate.swift */,
 				2333D1822518C39400543F23 /* SceneDelegate.swift */,
+				2333D1AF2519925B00543F23 /* Components */,
+				2333D1AE2519924800543F23 /* Helper */,
+				2333D1AB2519918800543F23 /* Entity */,
+				2333D1A825198E6000543F23 /* Resources */,
+				2333D1A02519874C00543F23 /* Cells */,
 				2333D1842518C39400543F23 /* ViewController.swift */,
+				2333D1B22519A3FC00543F23 /* Reactor.swift */,
+				2333D1B02519970B00543F23 /* Model.swift */,
 				2333D1862518C39400543F23 /* Main.storyboard */,
-				2333D1892518C39500543F23 /* Assets.xcassets */,
 				2333D18B2518C39500543F23 /* LaunchScreen.storyboard */,
 				2333D18E2518C39500543F23 /* Info.plist */,
 			);
 			path = "Task-D";
+			sourceTree = "<group>";
+		};
+		2333D1A02519874C00543F23 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2333D19825197BA400543F23 /* RightCell.swift */,
+				2333D19925197BA400543F23 /* RightCell.xib */,
+				2333D19C2519844B00543F23 /* LeftCell.swift */,
+				2333D19D2519844B00543F23 /* LeftCell.xib */,
+				2333D1A12519877C00543F23 /* AverageCell.swift */,
+				2333D1A22519877C00543F23 /* AverageCell.xib */,
+				23340CC72519E25E00CE0CFB /* HashTagCell.swift */,
+				23340CC82519E25E00CE0CFB /* HashTagCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2333D1A825198E6000543F23 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2333D1892518C39500543F23 /* Assets.xcassets */,
+				2333D1A925198E6F00543F23 /* RoomListData.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2333D1AB2519918800543F23 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2333D1AC251991B600543F23 /* RoomList.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2333D1AE2519924800543F23 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2333D1962518ECFA00543F23 /* UIView + Ex.swift */,
+				23340CCB251A036B00CE0CFB /* UIScrollView + Rx.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2333D1AF2519925B00543F23 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2333D1942518E5C200543F23 /* FilterButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +174,11 @@
 			dependencies = (
 			);
 			name = "Task-D";
+			packageProductDependencies = (
+				2333D1A625198DF200543F23 /* ReactorKit */,
+				2333D1B52519A5BD00543F23 /* RxAppState */,
+				23340CC52519D2DA00CE0CFB /* Kingfisher */,
+			);
 			productName = "Task-D";
 			productReference = 2333D17D2518C39400543F23 /* Task-D.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +207,11 @@
 				Base,
 			);
 			mainGroup = 2333D1742518C39400543F23;
+			packageReferences = (
+				2333D1A525198DF200543F23 /* XCRemoteSwiftPackageReference "ReactorKit" */,
+				2333D1B42519A5BD00543F23 /* XCRemoteSwiftPackageReference "RxAppState" */,
+				23340CC42519D2DA00CE0CFB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 2333D17E2518C39400543F23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,7 +226,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23340CCA2519E25E00CE0CFB /* HashTagCell.xib in Resources */,
+				2333D19F2519844B00543F23 /* LeftCell.xib in Resources */,
+				2333D19B25197BA400543F23 /* RightCell.xib in Resources */,
 				2333D18D2518C39500543F23 /* LaunchScreen.storyboard in Resources */,
+				2333D1A42519877C00543F23 /* AverageCell.xib in Resources */,
+				2333D1AA25198E6F00543F23 /* RoomListData.txt in Resources */,
 				2333D18A2518C39500543F23 /* Assets.xcassets in Resources */,
 				2333D1882518C39400543F23 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +244,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23340CC92519E25E00CE0CFB /* HashTagCell.swift in Sources */,
+				2333D19A25197BA400543F23 /* RightCell.swift in Sources */,
+				23340CCC251A036B00CE0CFB /* UIScrollView + Rx.swift in Sources */,
+				2333D1972518ECFA00543F23 /* UIView + Ex.swift in Sources */,
 				2333D1852518C39400543F23 /* ViewController.swift in Sources */,
+				2333D1A32519877C00543F23 /* AverageCell.swift in Sources */,
 				2333D1812518C39400543F23 /* AppDelegate.swift in Sources */,
+				2333D1B12519970B00543F23 /* Model.swift in Sources */,
+				2333D1AD251991B600543F23 /* RoomList.swift in Sources */,
+				2333D1B32519A3FC00543F23 /* Reactor.swift in Sources */,
+				2333D19E2519844B00543F23 /* LeftCell.swift in Sources */,
 				2333D1832518C39400543F23 /* SceneDelegate.swift in Sources */,
+				2333D1952518E5C200543F23 /* FilterButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +454,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2333D1A525198DF200543F23 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+		2333D1B42519A5BD00543F23 /* XCRemoteSwiftPackageReference "RxAppState" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pixeldock/RxAppState";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.1;
+			};
+		};
+		23340CC42519D2DA00CE0CFB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2333D1A625198DF200543F23 /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2333D1A525198DF200543F23 /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
+		};
+		2333D1B52519A5BD00543F23 /* RxAppState */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2333D1B42519A5BD00543F23 /* XCRemoteSwiftPackageReference "RxAppState" */;
+			productName = RxAppState;
+		};
+		23340CC52519D2DA00CE0CFB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23340CC42519D2DA00CE0CFB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2333D1752518C39400543F23 /* Project object */;
 }

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,258 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Task_D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="KK8-7U-CFF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huH-Qa-y1c">
+                                <rect key="frame" x="15" y="110" width="49" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="방 종류">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbd-pX-BiZ">
+                                <rect key="frame" x="15" y="195" width="64" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="매물 종류">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6H-Fu-TLb">
+                                <rect key="frame" x="193" y="195" width="30" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="가격">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZ5-Kc-vYi" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                                <rect key="frame" x="15" y="141" width="43" height="39"/>
+                                <color key="backgroundColor" red="0.2627450980392157" green="0.51372549019607838" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="9" minY="11" maxX="9" maxY="11"/>
+                                <state key="normal" title="원룸">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGs-yJ-enr" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                                <rect key="frame" x="15" y="226" width="43" height="39"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="9" minY="11" maxX="9" maxY="11"/>
+                                <state key="normal" title="월세">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eV-lZ-gTa" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                                <rect key="frame" x="66" y="226" width="43" height="39"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="9" minY="11" maxX="9" maxY="11"/>
+                                <state key="normal" title="전세">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdG-Le-5qp" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                                <rect key="frame" x="117" y="226" width="43" height="39"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="9" minY="11" maxX="9" maxY="11"/>
+                                <state key="normal" title="매매">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGs-CT-8QB" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                                <rect key="frame" x="66" y="141" width="61" height="39"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="6" minY="11" maxX="6" maxY="11"/>
+                                <state key="normal" title="투쓰리룸">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1A-rr-YX3" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                                <rect key="frame" x="135" y="141" width="61" height="39"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="6" minY="11" maxX="6" maxY="11"/>
+                                <state key="normal" title="오피스텔">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-Ha-cfz" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                                <rect key="frame" x="193" y="226" width="61" height="39"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="6" minY="11" maxX="6" maxY="11"/>
+                                <state key="normal" title="오름차순">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2z-AV-ETR" customClass="FilterButton" customModule="Task_D" customModuleProvider="target">
+                                <rect key="frame" x="204" y="141" width="49" height="39"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="6" minY="11" maxX="6" maxY="11"/>
+                                <state key="normal" title="아파트">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t4k-zh-1XU">
+                                <rect key="frame" x="0.0" y="285" width="414" height="543"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="B1A-rr-YX3" firstAttribute="leading" secondItem="NGs-CT-8QB" secondAttribute="trailing" constant="8" id="26L-uZ-7kI"/>
+                            <constraint firstItem="Z6H-Fu-TLb" firstAttribute="top" secondItem="Tbd-pX-BiZ" secondAttribute="top" id="2BV-bO-kS9"/>
+                            <constraint firstItem="n2z-AV-ETR" firstAttribute="leading" secondItem="B1A-rr-YX3" secondAttribute="trailing" constant="8" id="39w-oT-vuF"/>
+                            <constraint firstItem="EUd-Ha-cfz" firstAttribute="top" secondItem="cdG-Le-5qp" secondAttribute="top" id="7vv-S7-5M9"/>
+                            <constraint firstItem="t4k-zh-1XU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Nu-iw-fhQ"/>
+                            <constraint firstItem="QGs-yJ-enr" firstAttribute="leading" secondItem="GZ5-Kc-vYi" secondAttribute="leading" id="ACg-cT-ZbO"/>
+                            <constraint firstItem="QGs-yJ-enr" firstAttribute="top" secondItem="Tbd-pX-BiZ" secondAttribute="bottom" constant="10" id="Ah3-Rw-3gQ"/>
+                            <constraint firstItem="EUd-Ha-cfz" firstAttribute="leading" secondItem="Z6H-Fu-TLb" secondAttribute="leading" id="DNw-In-gE9"/>
+                            <constraint firstItem="6eV-lZ-gTa" firstAttribute="top" secondItem="QGs-yJ-enr" secondAttribute="top" id="DaL-RM-RUl"/>
+                            <constraint firstItem="cdG-Le-5qp" firstAttribute="top" secondItem="6eV-lZ-gTa" secondAttribute="top" id="H9b-j0-Rg9"/>
+                            <constraint firstItem="6eV-lZ-gTa" firstAttribute="leading" secondItem="QGs-yJ-enr" secondAttribute="trailing" constant="8" id="IJO-Bm-TVc"/>
+                            <constraint firstItem="GZ5-Kc-vYi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="SRs-TD-JVh"/>
+                            <constraint firstItem="Tbd-pX-BiZ" firstAttribute="top" secondItem="GZ5-Kc-vYi" secondAttribute="bottom" constant="15" id="TMG-Qk-IyB"/>
+                            <constraint firstItem="t4k-zh-1XU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-34" id="Utr-p1-uUq"/>
+                            <constraint firstItem="t4k-zh-1XU" firstAttribute="top" secondItem="QGs-yJ-enr" secondAttribute="bottom" constant="20" id="XyS-rs-Orj"/>
+                            <constraint firstItem="GZ5-Kc-vYi" firstAttribute="top" secondItem="huH-Qa-y1c" secondAttribute="bottom" constant="10" id="ZCc-6I-xCT"/>
+                            <constraint firstItem="B1A-rr-YX3" firstAttribute="top" secondItem="NGs-CT-8QB" secondAttribute="top" id="dAK-ho-s6B"/>
+                            <constraint firstItem="Tbd-pX-BiZ" firstAttribute="leading" secondItem="huH-Qa-y1c" secondAttribute="leading" id="fK0-JC-nYY"/>
+                            <constraint firstItem="EUd-Ha-cfz" firstAttribute="top" secondItem="Z6H-Fu-TLb" secondAttribute="bottom" constant="10" id="fe6-4d-0Yv"/>
+                            <constraint firstItem="n2z-AV-ETR" firstAttribute="top" secondItem="B1A-rr-YX3" secondAttribute="top" id="hxU-DX-VN3"/>
+                            <constraint firstItem="t4k-zh-1XU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="j7n-jY-xOs"/>
+                            <constraint firstItem="KK8-7U-CFF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="j8M-8E-Chb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KK8-7U-CFF" secondAttribute="trailing" id="kAa-iL-DcS"/>
+                            <constraint firstItem="Z6H-Fu-TLb" firstAttribute="leading" secondItem="cdG-Le-5qp" secondAttribute="trailing" constant="33" id="m67-e3-yHN"/>
+                            <constraint firstItem="cdG-Le-5qp" firstAttribute="leading" secondItem="6eV-lZ-gTa" secondAttribute="trailing" constant="8" id="mY3-1k-Jps"/>
+                            <constraint firstItem="NGs-CT-8QB" firstAttribute="top" secondItem="GZ5-Kc-vYi" secondAttribute="top" id="n8I-6l-dbg"/>
+                            <constraint firstItem="NGs-CT-8QB" firstAttribute="leading" secondItem="GZ5-Kc-vYi" secondAttribute="trailing" constant="8" id="tGg-Tz-cfi"/>
+                            <constraint firstItem="KK8-7U-CFF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uTP-0Q-Tsq"/>
+                            <constraint firstItem="huH-Qa-y1c" firstAttribute="top" secondItem="KK8-7U-CFF" secondAttribute="bottom" constant="10" id="ufd-tS-5xz"/>
+                            <constraint firstItem="huH-Qa-y1c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="z4r-Un-ACk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="KK8-7U-CFF" id="Ong-eC-ha8"/>
+                        <outlet property="tableView" destination="t4k-zh-1XU" id="sLr-Ny-emC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
