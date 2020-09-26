@@ -3,13 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2313940A251A058B00AE301A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 23139409251A058B00AE301A /* RxCocoa */; };
-		2313940C251A058B00AE301A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2313940B251A058B00AE301A /* RxSwift */; };
-		2313940F251A05B000AE301A /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2313940E251A05B000AE301A /* ReactorKit */; };
+		0031AC59051E8B80C8E7B2BE /* libPods-Task-D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD54645F9860E85A02D925B /* libPods-Task-D.a */; };
 		2333D1812518C39400543F23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1802518C39400543F23 /* AppDelegate.swift */; };
 		2333D1832518C39400543F23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1822518C39400543F23 /* SceneDelegate.swift */; };
 		2333D1852518C39400543F23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1842518C39400543F23 /* ViewController.swift */; };
@@ -28,13 +26,13 @@
 		2333D1AD251991B600543F23 /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1AC251991B600543F23 /* RoomList.swift */; };
 		2333D1B12519970B00543F23 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1B02519970B00543F23 /* Model.swift */; };
 		2333D1B32519A3FC00543F23 /* Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333D1B22519A3FC00543F23 /* Reactor.swift */; };
-		23340CC62519D2DA00CE0CFB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 23340CC52519D2DA00CE0CFB /* Kingfisher */; };
 		23340CC92519E25E00CE0CFB /* HashTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23340CC72519E25E00CE0CFB /* HashTagCell.swift */; };
 		23340CCA2519E25E00CE0CFB /* HashTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23340CC82519E25E00CE0CFB /* HashTagCell.xib */; };
 		23340CCC251A036B00CE0CFB /* UIScrollView + Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23340CCB251A036B00CE0CFB /* UIScrollView + Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1036E3BBAAD69C416FD0D12D /* Pods-Task-D.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-D.debug.xcconfig"; path = "Target Support Files/Pods-Task-D/Pods-Task-D.debug.xcconfig"; sourceTree = "<group>"; };
 		2333D17D2518C39400543F23 /* Task-D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task-D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2333D1802518C39400543F23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2333D1822518C39400543F23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +56,8 @@
 		23340CC72519E25E00CE0CFB /* HashTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCell.swift; sourceTree = "<group>"; };
 		23340CC82519E25E00CE0CFB /* HashTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HashTagCell.xib; sourceTree = "<group>"; };
 		23340CCB251A036B00CE0CFB /* UIScrollView + Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView + Rx.swift"; sourceTree = "<group>"; };
+		5CD54645F9860E85A02D925B /* libPods-Task-D.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Task-D.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A5B4F76665E80F37F6A838 /* Pods-Task-D.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-D.release.xcconfig"; path = "Target Support Files/Pods-Task-D/Pods-Task-D.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2313940C251A058B00AE301A /* RxSwift in Frameworks */,
-				2313940A251A058B00AE301A /* RxCocoa in Frameworks */,
-				2313940F251A05B000AE301A /* ReactorKit in Frameworks */,
-				23340CC62519D2DA00CE0CFB /* Kingfisher in Frameworks */,
+				0031AC59051E8B80C8E7B2BE /* libPods-Task-D.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +77,8 @@
 			children = (
 				2333D17F2518C39400543F23 /* Task-D */,
 				2333D17E2518C39400543F23 /* Products */,
+				6965B7A94FCECACDA2E62ECB /* Pods */,
+				9EEABA6300F25380345C4ACA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +159,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		6965B7A94FCECACDA2E62ECB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1036E3BBAAD69C416FD0D12D /* Pods-Task-D.debug.xcconfig */,
+				87A5B4F76665E80F37F6A838 /* Pods-Task-D.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9EEABA6300F25380345C4ACA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CD54645F9860E85A02D925B /* libPods-Task-D.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +183,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2333D1912518C39500543F23 /* Build configuration list for PBXNativeTarget "Task-D" */;
 			buildPhases = (
+				90999E1EEBC6F76F72E5E006 /* [CP] Check Pods Manifest.lock */,
 				2333D1792518C39400543F23 /* Sources */,
 				2333D17A2518C39400543F23 /* Frameworks */,
 				2333D17B2518C39400543F23 /* Resources */,
@@ -177,10 +194,6 @@
 			);
 			name = "Task-D";
 			packageProductDependencies = (
-				23340CC52519D2DA00CE0CFB /* Kingfisher */,
-				23139409251A058B00AE301A /* RxCocoa */,
-				2313940B251A058B00AE301A /* RxSwift */,
-				2313940E251A05B000AE301A /* ReactorKit */,
 			);
 			productName = "Task-D";
 			productReference = 2333D17D2518C39400543F23 /* Task-D.app */;
@@ -193,7 +206,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Pete;
 				TargetAttributes = {
 					2333D17C2518C39400543F23 = {
@@ -211,9 +224,6 @@
 			);
 			mainGroup = 2333D1742518C39400543F23;
 			packageReferences = (
-				23340CC42519D2DA00CE0CFB /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				23139408251A058B00AE301A /* XCRemoteSwiftPackageReference "RxSwift" */,
-				2313940D251A05B000AE301A /* XCRemoteSwiftPackageReference "ReactorKit" */,
 			);
 			productRefGroup = 2333D17E2518C39400543F23 /* Products */;
 			projectDirPath = "";
@@ -241,6 +251,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		90999E1EEBC6F76F72E5E006 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Task-D-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2333D1792518C39400543F23 /* Sources */ = {
@@ -311,6 +346,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -371,6 +407,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -401,6 +438,7 @@
 		};
 		2333D1922518C39500543F23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1036E3BBAAD69C416FD0D12D /* Pods-Task-D.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -419,6 +457,7 @@
 		};
 		2333D1932518C39500543F23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87A5B4F76665E80F37F6A838 /* Pods-Task-D.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -457,56 +496,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		23139408251A058B00AE301A /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.1;
-			};
-		};
-		2313940D251A05B000AE301A /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactorKit/ReactorKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.0;
-			};
-		};
-		23340CC42519D2DA00CE0CFB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.15.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		23139409251A058B00AE301A /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 23139408251A058B00AE301A /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		2313940B251A058B00AE301A /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 23139408251A058B00AE301A /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		2313940E251A05B000AE301A /* ReactorKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2313940D251A05B000AE301A /* XCRemoteSwiftPackageReference "ReactorKit" */;
-			productName = ReactorKit;
-		};
-		23340CC52519D2DA00CE0CFB /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 23340CC42519D2DA00CE0CFB /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2333D1752518C39400543F23 /* Project object */;
 }

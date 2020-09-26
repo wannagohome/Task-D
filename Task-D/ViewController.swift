@@ -40,7 +40,7 @@ final class ViewController: UIViewController, StoryboardView {
             .skip(1)
             .distinctUntilChanged()
             .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-            .map { _ in Reactor.Action.getWholeList }
+            .map { Reactor.Action.search($0) }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         

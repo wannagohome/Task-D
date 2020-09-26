@@ -16,7 +16,7 @@ final class RoomListReactor: Reactor {
     }
     
     enum Action {
-        case getWholeList
+        case search(String)
         case loadNextPage
         case filterRoomType(Int)
         case filterSellingType(Int)
@@ -24,6 +24,7 @@ final class RoomListReactor: Reactor {
     }
     
     enum Mutation {
+        case setSearchText(String)
         case setList([Room])
         case appendList([Room])
         case setAverage([Average])
@@ -35,6 +36,7 @@ final class RoomListReactor: Reactor {
     }
     
     struct State {
+        var searchText: String?
         var roomList: [Room]?
         var average: [Average]?
         var page = 1
@@ -52,13 +54,19 @@ final class RoomListReactor: Reactor {
         let nextPage = Observable<Mutation>.just(.setPage(self.currentState.page+1))
         let getList = model.getRoom()
             .asObservable()
+            .map { list in
+                list.filter { room in
+                    guard let searchText = self.currentState.searchText,
+                          !searchText.isEmpty,
+                          let hashTags = room.hashTags else { return true }
+                    return hashTags.contains{ $0.contains(searchText) }
+                }
+            }
             .map { room -> [Room] in
                 room.sorted {
-                    if self.currentState.sort == .ascending {
-                        return $0.price > $1.price
-                    } else {
-                        return $0.price < $1.price
-                    }
+                    self.currentState.sort == .ascending
+                        ? $0.price > $1.price
+                        : $0.price < $1.price
                 }
         }
         .map {
@@ -76,12 +84,12 @@ final class RoomListReactor: Reactor {
             .map { Mutation.setAverage($0) }
         
         switch action {
-        case .getWholeList:
+        case .search(let text):
             guard !self.currentState.isLoading else { return .empty() }
             guard !self.currentState.isLastPage else { return .empty() }
-            
+            let setSearchText = Observable.just(Mutation.setSearchText(text))
 
-            return .concat([startLoading, firstPage, setList, getAverage, endLoading])
+            return .concat([startLoading, setSearchText, firstPage, setList, getAverage, endLoading])
             
         case .loadNextPage:
             guard !self.currentState.isLoading else { return .empty() }
@@ -105,6 +113,9 @@ final class RoomListReactor: Reactor {
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
         switch mutation {
+        case .setSearchText(let str):
+            newState.searchText = str
+            
         case .setList(let list):
             newState.roomList = list
             newState.isLastPage = false
