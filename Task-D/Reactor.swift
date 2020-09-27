@@ -55,28 +55,33 @@ final class RoomListReactor: Reactor {
         let getList = model.getRoom()
             .asObservable()
             .map { list in
-                list.filter { room in
-                    guard let searchText = self.currentState.searchText,
+                list.filter {[weak self] room in
+                    guard let self = self,
+                          let searchText = self.currentState.searchText,
                           !searchText.isEmpty,
                           let hashTags = room.hashTags else { return true }
                     return hashTags.contains{ $0.contains(searchText) }
                 }
             }
             .map { room -> [Room] in
-                room.sorted {
-                    self.currentState.sort == .ascending
+                room.sorted { [weak self] in
+                    guard let self = self else { return false }
+                    return self.currentState.sort == .ascending
                         ? $0.price > $1.price
                         : $0.price < $1.price
                 }
-        }
-        .map {
-            $0.filter {
-                self.currentState.roomTypeFilter.contains($0.roomType!) &&
+            }
+            .map {
+                $0.filter { [weak self] in
+                    guard let self = self else { return false }
+                    return self.currentState.roomTypeFilter.contains($0.roomType!) &&
                         self.currentState.sellTypeFilter.contains($0.sellingType!)
                 }
-        }
-        .map { $0.at(page: self.currentState.page) }
-
+            }
+            .map { [weak self] room -> [Room] in
+                guard let self = self else { return room }
+                return room.at(page: self.currentState.page) }
+        
         let setList = getList.map { Mutation.setList($0) }
         let appendList = getList.map { Mutation.appendList($0) }
         let getAverage = model.getAverage()
